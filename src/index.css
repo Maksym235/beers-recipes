@@ -3,6 +3,8 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  background-color: #bcbcbc;
+  min-height: 100vh;
 }
 
 a {
@@ -31,5 +33,4 @@ button {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
