@@ -7,10 +7,9 @@ import {
   Wrapper,
   Description,
 } from "./BeerListItem.styled";
-import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 export const BeersListItem = ({ beer, onRightClick, selected }) => {
   const [isSelected, setIsSelected] = useState(false);
   const { name, tagline, description, image_url, id } = beer;

@@ -22,6 +22,11 @@ export const GoBack = styled(Link)`
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    color: #cfe2f3;
+  }
 `;
 export const Name = styled.h3`
   font-family: Poppins;

@@ -20,4 +20,11 @@ export const Btn = styled.button`
   border-radius: 50px;
   border: none;
   color: #cfe2f3;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: #cfe2f3;
+    color: #134f5c;
+  }
 `;

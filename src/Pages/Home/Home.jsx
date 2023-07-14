@@ -3,12 +3,11 @@ import { useBeers } from "./store";
 import { useEffect } from "react";
 import { Main } from "./Home.styled";
 import { LoadMore } from "../../components/LoadMore/LoadMore";
-
 const Home = () => {
-  const { getBeers, beers, resetPage } = useBeers((store) => ({
+  const { getBeers, beers, isLoading } = useBeers((store) => ({
     getBeers: store.getAllBeers,
     beers: store.beers,
-    resetPage: store.resetPage,
+    isLoading: store.isLoading,
   }));
 
   useEffect(() => {
@@ -16,12 +15,12 @@ const Home = () => {
       return;
     }
     getBeers();
-  }, [beers.length, getBeers, resetPage]);
+  }, [beers.length, getBeers]);
 
   return (
     <Main>
       <BeersList beers={beers} />
-      <LoadMore />
+      {isLoading ? null : <LoadMore />}
     </Main>
   );
 };
